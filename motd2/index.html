@@ -1,0 +1,162 @@
+<html>
+<head>
+	<title>求生服 L4D2 Server</title>
+	<meta charset='UTF-8'>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	    <style type="text/css">
+        body {
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: top center;
+            background-size: cover;
+        }
+
+        .button {
+            display: inline-block;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 10px;
+            border: none;
+            font: normal 48px/normal "Warnes", Helvetica, sans-serif;
+            color: rgba(240,248,255,1);
+            text-decoration: normal;
+            text-align: center;
+            -o-text-overflow: clip;
+            text-overflow: clip;
+            white-space: pre;
+            text-shadow: 0 0 10px rgba(240,248,255,1), 0 0 20px rgba(240,248,255,1), 0 0 30px rgba(240,248,255,1), 0 0 20px #808080, 0 0 35px #808080, 0 0 40px #808080, 0 0 50px #808080;
+            -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+            -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+            -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+            transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+        }
+
+
+        /*.button:hover {
+                text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,1), 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff;
+            }*/
+        
+    </style>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" OnLoad="myOnLoad()">
+	    <script LANGUAGE="JavaScript">
+        var images_count = 4;
+        var rand1 = 0;
+        var useRand = 0;
+        function swapPic() {
+            var imgnum = images_count - 1;
+            do {
+                var randnum = Math.random();
+                rand1 = Math.round((imgnum - 1) * randnum) + 1;
+            } while (rand1 == useRand);
+            useRand = rand1;
+
+            document.body.style.backgroundImage = "url('img/" + useRand + ".jpg')";
+        }
+
+	function includeHTML() {
+		var z, i, elmnt, file, xhttp;
+		/*loop through a collection of all HTML elements:*/
+		z = document.getElementsByTagName("*");
+		for (i = 0; i < z.length; i++) {
+			elmnt = z[i];
+			/*search for elements with a certain atrribute:*/
+			file = elmnt.getAttribute("w3-include-html");
+			if (file) {
+				/*make an HTTP request using the attribute value as the file name:*/
+				xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+	 				if (this.readyState == 4) {
+						if (this.status == 200) {elmnt.innerHTML = elmnt.innerHTML+this.responseText;}
+						/*remove the attribute, and call this function once more:*/
+						elmnt.removeAttribute("w3-include-html");
+						includeHTML();
+					}
+      				}      
+				xhttp.open("GET", file, true);
+				xhttp.send();
+				/*exit the function:*/
+				return;
+			}
+		}
+	};
+
+	function myOnLoad() {
+		swapPic();
+		includeHTML();
+
+	}
+    		</script>
+
+    <div title="Floating text!" style="
+            margin: auto;
+            width: 98%;
+            border: 3px solid #73AD21;
+            padding: 5px;
+            background: #ffffff;
+            text-align:center;
+    ">
+        理发店唯一指定服务器IP：<b><font color="DarkOrange"> 123.56.165.220:21551</font>  Tick60娱乐多特 </b>
+        <br /> 
+	<font color="red">联系服主：QQ群894695860或者QQ：870692853</font>不定时开三方图车（前提是你们到点记得进服）。
+    </div>
+    
+    <div style="
+            margin: auto;
+            width: 20%;
+            border: 3px solid #73AD21;
+            padding: 5px;
+            background: #ffffff;
+            text-align:left;
+            float:left;
+            margin-top: 10px;
+    ">
+        聊天区指令教学: <br />
+        视野转换：!3rd或!lsp<br />
+        豪掷千金：!buy或!rpg<br />
+        换个身子：!c <br />
+        换个牢笼：!chmap<br />
+        加入战局：!join或!jg<br />
+        爆改夜视：!nvs<br />
+        灵能折跃：!tpto<br />
+        饭堂集合：!v<br />
+        自杀开摆：!zs或!kill<br />
+        对准AI或队友按R键可传递物品<br />
+        按Z“look”或者Shift+E可做标记<br />
+        <!--<a href="http://steamcommunity.com/groups/wangePdeL4D2" target="_blank"><u><strong><font size="4" color="green">加入服务器steam组</font></strong></u></a>
+        Chat Commands: <br />
+        Buy stuff: !buy <br />
+        Change model: !csm or !lmc <br />
+        Vote for map:<br />
+        !chmap or !chmap2 <br />-->
+    </div>
+
+
+
+    <div id="outer" style="
+		position:absolute;
+		bottom:0px;
+		right:0px;
+		width:999px;
+		/*height:30px;*/
+    ">
+        <div style="
+				float:right;
+				width:9990px;
+				height:70px;
+				// border:1px solid #F00;
+				padding: 10px;
+				text-align: right;
+				margin-right: 10px;
+				text-shadow: 0 0 10px #FF0000;
+		    ">
+            <div class="button">白洲梓的理发店介绍页</div>
+        </div>
+        motd取自:https://github.com/rikka0w0/l4d2_motd 以及http://l4d2.wakeak.com/motd.html
+    </div>
+
+</body>
+</html>
